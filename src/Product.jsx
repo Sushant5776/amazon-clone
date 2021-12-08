@@ -1,15 +1,16 @@
+import { useCallback } from "react"
 import "./Product.css"
 import { useStateValue } from "./StateProvider"
 
 const Product = ({ id, title, image, price, rating = 0 }) => {
-  const [, dispatch] = useStateValue()
+  const [state, dispatch] = useStateValue()
 
-  const addToBasket = () => {
+  const addToBasket = useCallback(() => {
     dispatch({
       type: "ADD_TO_BASKET",
       item: { id, title, image, price, rating },
     })
-  }
+  }, [dispatch, id, title, image, price, rating])
 
   return (
     <div className="product">
@@ -28,7 +29,7 @@ const Product = ({ id, title, image, price, rating = 0 }) => {
         </div>
       </div>
       <img src={image} alt={title} />
-      <button onClick={addToBasket}>Add to Basket</button>
+      {state.user ? <button onClick={addToBasket}>Add to Basket</button> : ""}
     </div>
   )
 }

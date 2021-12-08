@@ -7,7 +7,7 @@ const Home = () => {
     <div className="home">
       <img
         src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-        alt=""
+        alt="Amazon"
         className="home__image"
       />
       <div className="home__row">
@@ -54,7 +54,7 @@ const Home = () => {
           id={1}
           title="TAGG Verve Ultra Smartwatch with 1.69'' 3D Curved Display, Real SPO2, and Real-Time Heart Rate Tracking, 10 Days Battery Backup, IPX68 Waterproof (Black), Standard"
           rating={4}
-          price="2,799"
+          price="2799"
           image="https://m.media-amazon.com/images/I/71HD7vBWC-L._SX522_.jpg"
         />
       </div>
