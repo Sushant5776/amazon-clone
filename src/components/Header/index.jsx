@@ -3,7 +3,6 @@ import {
 	MenuIcon,
 	SearchIcon,
 	ShoppingCartIcon,
-	ShoppingIcon,
 } from '@heroicons/react/outline'
 
 const Header = () => {
